@@ -11,7 +11,7 @@ The product is designed to deliver the best possible user experience with highly
 > Features: 
 
 - ✅ `Up-to-date Dependencies`
-- ✅ Theme: [Django Admin Modernize](https://github.com/app-generator/django-admin-modernize), **designed by [AdminMart](https://adminmart.com/?ref=1)
+- ✅ Theme: [Django Admin Modernize](https://github.com/app-generator/django-admin-modernize), **designed by [AdminMart](https://adminmart.com/?ref=1)**
   - `can be used in any Django project` (new or legacy)
 - ✅ **Authentication**: `Django.contrib.AUTH`, Registration
 - 🚀 `Deployment` 
