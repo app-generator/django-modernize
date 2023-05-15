@@ -5,6 +5,7 @@ The product is designed to deliver the best possible user experience with highly
 
 - 👉 [Django Modernize](#) - `Product page` (soon)
 - 👉 [Django Modernize](https://django-modernize.onrender.com/) - `LIVE Demo`
+- 👉 [Django Modernize](https://appseed.gitbook.io/django-modernize/) - `Documentation`
 
 <br />
 
