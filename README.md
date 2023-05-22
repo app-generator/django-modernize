@@ -1,7 +1,7 @@
 # [Django Modernize](https://appseed.us/product/modernize-dashboard/django/)
 
 Open-source **Django** project crafted on top of **[Modernize](https://appseed.us/product/modernize-dashboard/django/)**, an open-source `Bootstrap 5` design from [AdminMart](https://adminmart.com/?ref=1).
-The product is designed to deliver the best possible user experience with highly customizable feature-rich pages. `Material Material` has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
+The product is designed to deliver the best possible user experience with highly customizable feature-rich pages. `Modernize` has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
 
 - 👉 [Django Modernize](https://django-modernize.onrender.com) - `LIVE Demo`
 - 🛒 [Django Modernize PRO](https://appseed.us/product/modernize-dashboard-pro/django/) - `PRO Version`
