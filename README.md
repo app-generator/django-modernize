@@ -1,11 +1,10 @@
-# [Django Modernize](https://appseed.us/product/modernize-dashboard/django/)
+# [Django Modernize](https://app-generator.dev/product/atlantis-dark/django/)
 
-Open-source **Django** project crafted on top of **[Modernize](https://appseed.us/product/modernize-dashboard/django/)**, an open-source `Bootstrap 5` design from [AdminMart](https://adminmart.com/?ref=1).
+Open-source **Django** project crafted on top of **Modernize**, an open-source `Bootstrap 5` design from `AdminMart`.
 The product is designed to deliver the best possible user experience with highly customizable feature-rich pages. `Modernize` has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
 
-- 👉 [Django Modernize](https://django-modernize.onrender.com) - `LIVE Demo`
-- 🛒 [Django Modernize PRO](https://appseed.us/product/modernize-dashboard-pro/django/) - `PRO Version`
-- 🚀 Free [Support](https://appseed.us/support/) via Email & `Discord`
+- 👉 [Django Modernize](https://app-generator.dev/product/atlantis-dark/django/) - `Product Page`
+- 👉 [Getting Started with Django](https://app-generator.dev/docs/technologies/django/index.html) - a `comprehensive tutorial`
 
 <br />
 
@@ -116,4 +115,4 @@ At this point, the product should be LIVE.
 <br />
 
 ---
-[Django Modernize](https://appseed.us/product/modernize-dashboard/django/) - Minimal **Django** core provided by **[AppSeed](https://appseed.us/)**
+[Django Modernize](https://app-generator.dev/product/atlantis-dark/django/) - Minimal **Django** core provided by [App Generator](https://app-generator.dev).
