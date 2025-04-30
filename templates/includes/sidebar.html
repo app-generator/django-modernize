@@ -1,0 +1,181 @@
+{% load i18n static admin_modernize %}
+<aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div>
+      <div class="brand-logo d-flex align-items-center justify-content-between">
+        <a href="{% url 'index' %}" class="text-nowrap logo-img">
+          <img src="{% static 'assets/images/logos/dark-logo.svg' %}" width="180" alt="" />
+        </a>
+        <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+          <i class="ti ti-x fs-8"></i>
+        </div>
+      </div>
+      <!-- Sidebar navigation-->
+      <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+        <ul id="sidebarnav">
+          <li class="nav-small-cap">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu">Home</span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'index' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-layout-dashboard"></i>
+              </span>
+              <span class="hide-menu">Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'dynamic_dt' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-table"></i>
+              </span>
+              <span class="hide-menu">Dynamic Tables</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'dynamic_api' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-server"></i>
+              </span>
+              <span class="hide-menu">Dynamic API</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'charts' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-chart-bar"></i>
+              </span>
+              <span class="hide-menu">Charts</span>
+            </a>
+          </li>
+
+          {% admin_get_menu as app_list %}
+        {% if app_list %}
+          {% for app in app_list %}
+            {% if app.has_perms and not app.pinned %}
+            <li class="sidebar-item">
+              <a href="#!" class="sidebar-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <span class="pc-micon">
+                  <i class="ti {{app.icon}}"></i>
+                </span>
+                <span class="hide-menu">{{ app.label|slice:15 }}{% if app.label|length > 15 %}..{% endif %}</span>
+                <span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>
+              </a>
+              {% if app.models %}
+                <ul id="collapseExample" class="collapse">
+                  {% for model in app.models %}
+                  {% if model.url %}
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ model.url }}">
+                      {{ model.label }}
+                    </a>
+                  </li>
+                  {% else %}
+                  <li class="pc-item">{{ model.label }}</li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+
+          {% if request.user.is_authenticated and not request.user.is_superuser %}
+          <li class="nav-small-cap">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu">UI COMPONENTS</span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'ui-button' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-article"></i>
+              </span>
+              <span class="hide-menu">Buttons</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'ui-alert' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-alert-circle"></i>
+              </span>
+              <span class="hide-menu">Alerts</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'ui-card' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-cards"></i>
+              </span>
+              <span class="hide-menu">Card</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'ui-form' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-file-description"></i>
+              </span>
+              <span class="hide-menu">Forms</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'ui-typography' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-typography"></i>
+              </span>
+              <span class="hide-menu">Typography</span>
+            </a>
+          </li>
+          <li class="nav-small-cap">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu">EXTRA</span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'icon-tabler' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-mood-happy"></i>
+              </span>
+              <span class="hide-menu">Icons</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'sample-page' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-aperture"></i>
+              </span>
+              <span class="hide-menu">Sample Page</span>
+            </a>
+          </li>
+          <li class="nav-small-cap">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu">AUTH</span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'logout' %}" aria-expanded="false">
+              <span>
+                <i class="ti ti-logout"></i>
+              </span>
+              <span class="hide-menu">Logout</span>
+            </a>
+          </li>
+        </ul>
+        {% endif %}
+        <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
+          <div class="d-flex">
+            <div class="unlimited-access-title me-3">
+              <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Need More?</h6>
+              <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=1" target="_blank"
+                class="btn btn-primary fs-2 fw-semibold lh-sm">PRO Version</a>
+            </div>
+            <div class="unlimited-access-img">
+              <img src="{% static 'assets/images/backgrounds/rocket.png' %}" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+  </aside>

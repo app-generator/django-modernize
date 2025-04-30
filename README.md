@@ -78,7 +78,7 @@ The project is coded using a simple and intuitive structure presented below:
 ```bash
 < PROJECT ROOT >
    |
-   |-- core/                            
+   |-- config/                            
    |    |-- settings.py                  # Project Configuration  
    |    |-- urls.py                      # Project Routing
    |
